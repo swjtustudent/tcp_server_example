@@ -1,5 +1,5 @@
 包含一些TCP Server的基本实现
-其中7,8依赖libevent
+其中6,7,8依赖libevent
 1. tcp_server.c
 tcp服务器，只处理单用户请求
 
