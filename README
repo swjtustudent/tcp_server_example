@@ -1,0 +1,28 @@
+包含一些TCP Server的基本实现
+其中7,8依赖libevent
+1. tcp_server.c
+tcp服务器，只处理单用户请求
+
+2. tcp_server_multiprocess.c
+tcp并发服务器，每个用户请求起一个进程处理
+
+3. tcp_server_epoll.c
+tcp多路复用服务器
+
+4. tcp_reactor.c
+基于epoll实现的reactor模式服务器
+
+5. tcp_reactor_threadpool.c
+epoll 线程池实现的reactor模式服务器，处理http请求
+
+6. tcp_reactor_libevent.c
+基于libevent的reactor模式服务器，单进程单线程
+
+7. tcp_reactor_libevent_threadpool
+基于libevent，线程池实现的reactor模式的tcp服务器
+
+8. tcp_simreactor_libevent_threadpool
+基于libevent，线程池实现的模拟preactor模式的tcp服务器
+
+client:
+tcp_client, tcp_client_multi_thread
